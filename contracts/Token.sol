@@ -8,7 +8,7 @@ contract Token {
     string public constant NAME = "Pakata's hardhat Token";
     string public constant SYMBOL = "PKT";
 
-    uint256 public constant TOTAL_SYPPLY = 1000000;
+    uint256 public constant TOTAL_SUPPLY = 1000000;
 
     address immutable i_owner;
     mapping(address => uint) s_balances;
@@ -19,7 +19,7 @@ contract Token {
 
     constructor() {
         i_owner = msg.sender;
-        s_balances[msg.sender] = TOTAL_SYPPLY;
+        s_balances[msg.sender] = TOTAL_SUPPLY;
     }
 
     function transfer(address to, uint256 amount) external {
